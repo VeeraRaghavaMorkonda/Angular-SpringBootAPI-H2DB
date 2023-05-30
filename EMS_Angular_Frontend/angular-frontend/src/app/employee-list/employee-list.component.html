@@ -1,0 +1,34 @@
+<h4 style="text-align: center">(Angular-SpringBootAPI-H2DB-API Architecture)</h4>
+<h4> Employee List</h4>
+<table class = "table table-bordered table-sm table-hover table-responsive" style="font-size:small">
+    <thead style="background-color:rgb(94, 88, 88);color:white;text-align:center">
+        <tr>
+            <th> SL</th>
+            <th> Employee Name</th>
+            <th> AD ID </th>
+            <th> Email ID</th>
+            <th> Base Location</th>
+            <th> Project Name</th>
+            <th> Team Name</th>
+            <th> GCP Certifications</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees; index as i" >
+            <td> {{ i+1 }} </td>
+            <td> {{ employee.empName }} </td>
+            <td> {{ employee.adId }} </td>
+            <td> {{ employee.emailId }} </td>
+            <td> {{ employee.baseLocation }} </td>
+            <td> {{ employee.projectName }} </td>
+            <td> {{ employee.teamName }} </td>
+            <td> {{ employee.gcpCertification }} </td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-success btn-sm"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger btn-sm" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info btn-sm" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

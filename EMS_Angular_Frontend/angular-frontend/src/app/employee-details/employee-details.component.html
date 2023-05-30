@@ -1,0 +1,35 @@
+<br/>
+<h4> {{employee.empName}} Details</h4>
+
+<table class = "table table-bordered table-hover table-sm" style="max-width:40%;">
+    <tr>
+      <th>Employee Name</th>
+      <td>{{employee.empName}}</td>
+    </tr>
+    <tr>
+      <th>AD ID</th>
+      <td>{{employee.adId}}</td>
+    </tr>
+    <tr>
+      <th>Email Id</th>
+      <td>{{employee.emailId}}</td>
+    </tr>
+    <tr>
+        <th>Base Location</th>
+        <td>{{employee.baseLocation}}</td>
+    </tr>
+    <tr>
+        <th>Project Name</th>
+        <td>{{employee.projectName}}</td>
+    </tr>
+    <tr>
+        <th>Team Name</th>
+        <td>{{employee.teamName}}</td>
+    </tr>
+    <tr>
+        <th>GCP Certifications</th>
+        <td>{{employee.gcpCertification}}</td>
+    </tr>
+  </table>
+  <br/>
+  <button class = "btn btn-info btn-sm" (click)="goBack()">Back</button>
